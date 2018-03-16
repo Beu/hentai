@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>變體がな</title>
+    <link href="hentai.css" rel="stylesheet" type="text/css" />
+    <script type="application/javascript">
+// <![CDATA[
+
+var code_first = 0x1b000;
+var code_last = 0x1b11e;
+
+function onLoad() {
+	var thead = document.getElementById("list-thead");
+    var tfoot = document.getElementById("list-tfoot");
+    var tbody = document.getElementById("list-tbody");
+
+    removeChildren(thead);
+    {
+        var tr = document.createElement("tr");
+        {
+            var th = document.createElement("th");
+            tr.appendChild(th);
+            for (var i = 0;  i < 16;  ++i) {
+                th = document.createElement("th");
+                th.className = "monospace";
+                {
+                    var text = document.createTextNode(i.toString(16));
+                    th.appendChild(text);
+                }
+                tr.appendChild(th);
+            }
+        }
+        thead.appendChild(tr);
+    }
+
+    removeChildren(tfoot);
+    {
+        var tr = document.createElement("tr");
+        {
+            var th = document.createElement("th");
+            tr.appendChild(th);
+            for (var i = 0;  i < 16;  ++i) {
+                th = document.createElement("th");
+                th.className = "monospace";
+                {
+                    var text = document.createTextNode(i.toString(16));
+                    th.appendChild(text);
+                }
+                tr.appendChild(th);
+            }
+        }
+        tfoot.appendChild(tr);
+    }
+
+    removeChildren(tbody);
+    {
+        var code_first0 = code_first & 0xfffff0;
+        var code_lastF = (code_last & 0xfffff0) | 0x00000f;
+        for (var code = code_first0;  code <= code_lastF;  code += 16) {
+            var tr = document.createElement("tr");
+            {
+                var th = document.createElement("th");
+                th.className = "monospace";
+                {
+                    var text = document.createTextNode("U+" + code.toString(16));
+                    th.appendChild(text);
+                }
+                tr.appendChild(th);
+            }
+            for (var i = 0;  i < 16;  ++i) {
+                var td = document.createElement("td");
+                td.className = "hentai";
+                td.title = "U+" + (code + i).toString(16);
+                {
+                    var text = document.createTextNode(String.fromCodePoint(code + i));
+                    if (code + i >= code_first && code + i <= code_last) {
+                        td.appendChild(text);
+                    }
+                }
+                tr.appendChild(td);
+            }
+            tbody.appendChild(tr);
+        }
+    }
+}
+
+function removeChildren(element) {
+    while (element.firstChild != null) {
+        element.removeChild(element.firstChild);
+    }
+}
+
+// ]]>
+    </script>
+  </head>
+  <body onload="javascript:onLoad();">
+
+    <header>
+      <h1><ruby><rb>變體</rb><rp>(</rp><rt>ヘンタイ</rt><rp>)</rp></ruby>がな</h1>
+    </header>
+
+    <article>
+
+      <section>
+        <header>
+          <h2>一覽 with WOFF</h2>
+        </header>
+        <div>
+          <p>Unicode 10.0 (もしくは それ以前) に 「變體がな」 入りぬ。
+          然れば こゝに 記しゆきて text の copy &amp; paste に 用ゐむ。</p>
+
+          <p>これらの 文字を 下に 示す (code-point <code>U+1B000</code> より <code>U+1B11E</code> まで)。<br/>
+          但し その數 多く HTML にて 直に 記すは 煩しければ dynamic に JavaScript にて 記し出ださむ。<br/>
+          表示字型には 特製の WOFF (Web Open Font Format) file を 用ゐたり。<br/>
+          これは <code><a href="http://www.unicode.org/charts/">http://www.unicode.org/charts/</a></code> の Kana Supplement (<code>U1B000.pdf</code>) 及び Kana Extended-A (<code>U1B100.pdf</code>) より<br/>
+<a href="https://mupdf.com/">MuPDF</a> を 以て 字型 data を <ruby><rb>抽</rb><rp>(</rp><rt>ぬ</rt><rp>)</rp></ruby>き出だしゝ 後<br/>
+<a href="https://fontforge.github.io/en-US/">FontForge</a> を以て <ruby><rb>列</rb><rp>(</rp><rt>なら</rt><rp>)</rp></ruby>びかへ code-point を つけなほしゝ後 WOFF file を 作り出しゝ ものなり。<br/>
+          この HTML にては CSS の @font-face により これら 變體がな文字を 表したり。</p>
+
+          <ul>
+            <li><a href="hentai.html">hentai.html</a></li>
+            <li><a href="hentai.css">hentai.css</a></li>
+            <li><a href="hentai.woff">hentai.woff</a></li>
+          </ul>
+        </div>
+        <div>
+          <table>
+            <thead id="list-thead">
+            </thead>
+            <tbody id="list-tbody">
+            </tbody>
+            <tfoot id="list-tfoot">
+            </tfoot>
+          </table>
+        </div>
+
+        <div>
+          <table>
+            <tbody>
+              <tr>
+                <th>あ (安) ア (阿)</th>
+                <td>
+                  <span class="hentai">&#x1b002;</span> (安)
+                  <span class="hentai">&#x1b003;</span> (愛)
+                  <span class="hentai">&#x1b004;</span> (阿)
+                  <span class="hentai">&#x1b005;</span> (惡恶悪)
+                </td>
+              </tr>
+              <tr>
+                <th>い (以) イ (伊)</th>
+                <td>
+                  <span class="hentai">&#x1b006;</span> (以)
+                  <span class="hentai">&#x1b007;</span> (伊)
+                  <span class="hentai">&#x1b008;</span> (意)
+                  <span class="hentai">&#x1b009;</span> (移)
+                </td>
+              </tr>
+              <tr>
+                <th>う (宇) ウ (宇)</th>
+                <td>
+                  <span class="hentai">&#x1b00a;</span> (宇)
+                  <span class="hentai">&#x1b00b;</span> (宇)
+                  <span class="hentai">&#x1b00c;</span> (憂)
+                  <span class="hentai">&#x1b00d;</span> (有)
+                  <span class="hentai">&#x1b00e;</span> (雲)
+                </td>
+              </tr>
+              <tr>
+                <th>え (衣) エ (江)</th>
+                <td>
+                  <span class="hentai">&#x1b00f;</span> (盈)
+                  <span class="hentai">&#x1b010;</span> (緣缘縁)
+                  <span class="hentai">&#x1b011;</span> (衣)
+                  <span class="hentai">&#x1b012;</span> (衣)
+                  <span class="hentai">&#x1b013;</span> (要)
+                </td>
+              </tr>
+              <tr>
+                <th>お (於) オ (於)</th>
+                <td>
+                  <span class="hentai">&#x1b014;</span> (於扵)
+                  <span class="hentai">&#x1b015;</span> (於扵)
+                  <span class="hentai">&#x1b016;</span> (隱隠)
+                </td>
+              </tr>
+              <tr>
+                <th>か (加) カ (加)</th>
+                <td>
+                  <span class="hentai">&#x1b017;</span> (佳)
+                  <span class="hentai">&#x1b018;</span> (加)
+                  <span class="hentai">&#x1b019;</span> (可)
+                  <span class="hentai">&#x1b01a;</span> (可)
+                  <span class="hentai">&#x1b01b;</span> (嘉)
+                  <span class="hentai">&#x1b01c;</span> (我)
+                  <span class="hentai">&#x1b01d;</span> (歟欤)
+                  <span class="hentai">&#x1b01e;</span> (賀)
+                  <span class="hentai">&#x1b01f;</span> (閑)
+                  <span class="hentai">&#x1b020;</span> (香)
+                  <span class="hentai">&#x1b021;</span> (駕驾)
+                  <span class="hentai">&#x1b022;</span> (家)
+                </td>
+              </tr>
+              <tr>
+                <th>き (幾) キ (幾)</th>
+                <td>
+                  <span class="hentai">&#x1b023;</span> (㐂喜)
+                  <span class="hentai">&#x1b024;</span> (幾)
+                  <span class="hentai">&#x1b025;</span> (幾)
+                  <span class="hentai">&#x1b026;</span> (支)
+                  <span class="hentai">&#x1b027;</span> (木)
+                  <span class="hentai">&#x1b028;</span> (祈)
+                  <span class="hentai">&#x1b029;</span> (貴贵)
+                  <span class="hentai">&#x1b02a;</span> (起)
+                  <span class="hentai">&#x1b03b;</span> (期)
+                </td>
+              </tr>
+              <tr>
+                <th>く (久) ク (久)</th>
+                <td>
+                  <span class="hentai">&#x1b02b;</span> (久)
+                  <span class="hentai">&#x1b02c;</span> (久)
+                  <span class="hentai">&#x1b02d;</span> (九)
+                  <span class="hentai">&#x1b02e;</span> (供)
+                  <span class="hentai">&#x1b02f;</span> (倶)
+                  <span class="hentai">&#x1b030;</span> (具)
+                  <span class="hentai">&#x1b031;</span> (求)
+                </td>
+              </tr>
+              <tr>
+                <th>け (計) ケ (介? 个=箇?)</th>
+                <td>
+                  <span class="hentai">&#x1b032;</span> (介)
+                  <span class="hentai">&#x1b033;</span> (介)
+                  <span class="hentai">&#x1b034;</span> (希)
+                  <span class="hentai">&#x1b035;</span> (氣)
+                  <span class="hentai">&#x1b036;</span> (計=计)
+                  <span class="hentai">&#x1b037;</span> (遣)
+                  <span class="hentai">&#x1b022;</span> (家)
+                </td>
+              </tr>
+              <tr>
+                <th>こ (己) コ (己)</th>
+                <td>
+                  <span class="hentai">&#x1b038;</span> (古)
+                  <span class="hentai">&#x1b039;</span> (故)
+                  <span class="hentai">&#x1b03a;</span> (許许)
+                  <span class="hentai">&#x1b03b;</span> (期)
+                  <span class="hentai">&#x1b098;</span> (子)
+                </td>
+              </tr>
+              <tr>
+                <th>さ (左) サ (草? 散?)</th>
+                <td>
+                  <span class="hentai">&#x1b03c;</span> (乍)
+                  <span class="hentai">&#x1b03d;</span> (佐)
+                  <span class="hentai">&#x1b03e;</span> (佐)
+                  <span class="hentai">&#x1b03f;</span> (左)
+                  <span class="hentai">&#x1b040;</span> (差)
+                  <span class="hentai">&#x1b041;</span> (散)
+                  <span class="hentai">&#x1b042;</span> (斜)
+                  <span class="hentai">&#x1b043;</span> (沙)
+                </td>
+              </tr>
+              <tr>
+                <th>し (之) シ (之)</th>
+                <td>
+                  <span class="hentai">&#x1b044;</span> (之)
+                  <span class="hentai">&#x1b045;</span> (之)
+                  <span class="hentai">&#x1b046;</span> (事)
+                  <span class="hentai">&#x1b047;</span> (四)
+                  <span class="hentai">&#x1b048;</span> (志)
+                  <span class="hentai">&#x1b049;</span> (新)
+                </td>
+              </tr>
+              <tr>
+                <th>す (寸) ス (須)</th>
+                <td>
+                  <span class="hentai">&#x1b04a;</span> (受)
+                  <span class="hentai">&#x1b04b;</span> (壽寿)
+                  <span class="hentai">&#x1b04c;</span> (數数)
+                  <span class="hentai">&#x1b04d;</span> (數数)
+                  <span class="hentai">&#x1b04e;</span> (春)
+                  <span class="hentai">&#x1b04f;</span> (春)
+                  <span class="hentai">&#x1b050;</span> (須=须)
+                  <span class="hentai">&#x1b051;</span> (須)
+                </td>
+              </tr>
+              <tr>
+                <th>せ (世) セ (世)</th>
+                <td>
+                  <span class="hentai">&#x1b052;</span> (世)
+                  <span class="hentai">&#x1b053;</span> (世)
+                  <span class="hentai">&#x1b054;</span> (世)
+                  <span class="hentai">&#x1b055;</span> (勢)
+                  <span class="hentai">&#x1b056;</span> (聲)
+                </td>
+              </tr>
+              <tr>
+                <th>そ (曽=曾) ソ (曽=曾)</th>
+                <td>
+                  <span class="hentai">&#x1b057;</span> (所)
+                  <span class="hentai">&#x1b058;</span> (所)
+                  <span class="hentai">&#x1b059;</span> (曽曾)
+                  <span class="hentai">&#x1b05a;</span> (曽曾)
+                  <span class="hentai">&#x1b05b;</span> (楚)
+                  <span class="hentai">&#x1b05c;</span> (蘇)
+                  <span class="hentai">&#x1b05d;</span> (䖏處)
+                </td>
+              </tr>
+              <tr>
+                <th>た (太) タ (多)</th>
+                <td>
+                  <span class="hentai">&#x1b05e;</span> (堂)
+                  <span class="hentai">&#x1b05f;</span> (多)
+                  <span class="hentai">&#x1b060;</span> (多)
+                  <span class="hentai">&#x1b061;</span> (當当)
+                </td>
+              </tr>
+              <tr>
+                <th>ち (知) チ (千)</th>
+                <td>
+                  <span class="hentai">&#x1b062;</span> (千)
+                  <span class="hentai">&#x1b063;</span> (地)
+                  <span class="hentai">&#x1b064;</span> (智)
+                  <span class="hentai">&#x1b065;</span> (知)
+                  <span class="hentai">&#x1b066;</span> (知)
+                  <span class="hentai">&#x1b067;</span> (致)
+                  <span class="hentai">&#x1b068;</span> (遲遅)
+                </td>
+              </tr>
+              <tr>
+                <th>つ (川) ツ (川? 州?)</th>
+                <td>
+                  <span class="hentai">&#x1b069;</span> (川)
+                  <span class="hentai">&#x1b06a;</span> (川)
+                  <span class="hentai">&#x1b06b;</span> (津)
+                  <span class="hentai">&#x1b06c;</span> (都)
+                  <span class="hentai">&#x1b06d;</span> (徒)
+                </td>
+              </tr>
+              <tr>
+                <th>て (天) テ (天)</th>
+                <td>
+                  <span class="hentai">&#x1b06e;</span> (亭)
+                  <span class="hentai">&#x1b06f;</span> (低)
+                  <span class="hentai">&#x1b070;</span> (傳传伝)
+                  <span class="hentai">&#x1b071;</span> (天)
+                  <span class="hentai">&#x1b072;</span> (天)
+                  <span class="hentai">&#x1b073;</span> (天)
+                  <span class="hentai">&#x1b074;</span> (帝)
+                  <span class="hentai">&#x1b075;</span> (弖)
+                  <span class="hentai">&#x1b076;</span> (轉转転)
+                  <span class="hentai">&#x1b08e;</span> (而)
+                </td>
+              </tr>
+              <tr>
+                <th>と (止) ト (止)</th>
+                <td>
+                  <span class="hentai">&#x1b077;</span> (土)
+                  <span class="hentai">&#x1b078;</span> (度)
+                  <span class="hentai">&#x1b079;</span> (東东)
+                  <span class="hentai">&#x1b07a;</span> (登)
+                  <span class="hentai">&#x1b07b;</span> (登)
+                  <span class="hentai">&#x1b07c;</span> (砥)
+                  <span class="hentai">&#x1b07d;</span> (等)
+                  <span class="hentai">&#x1b06d;</span> (徒)
+                </td>
+              </tr>
+              <tr>
+                <th>な (奈) ナ (奈)</th>
+                <td>
+                  <span class="hentai">&#x1b07e;</span> (南)
+                  <span class="hentai">&#x1b07f;</span> (名)
+                  <span class="hentai">&#x1b080;</span> (奈)
+                  <span class="hentai">&#x1b081;</span> (奈)
+                  <span class="hentai">&#x1b082;</span> (奈)
+                  <span class="hentai">&#x1b083;</span> (菜)
+                  <span class="hentai">&#x1b084;</span> (那)
+                  <span class="hentai">&#x1b085;</span> (那)
+                  <span class="hentai">&#x1b086;</span> (難)
+                </td>
+              </tr>
+              <tr>
+                <th>に (仁) ニ (二)</th>
+                <td>
+                  <span class="hentai">&#x1b087;</span> (丹)
+                  <span class="hentai">&#x1b088;</span> (二)
+                  <span class="hentai">&#x1b089;</span> (仁)
+                  <span class="hentai">&#x1b08a;</span> (兒児)
+                  <span class="hentai">&#x1b08b;</span> (尓爾)
+                  <span class="hentai">&#x1b08c;</span> (尓爾)
+                  <span class="hentai">&#x1b08d;</span> (耳)
+                  <span class="hentai">&#x1b08e;</span> (而)
+                </td>
+              </tr>
+              <tr>
+                <th>ぬ (奴) ヌ (奴)</th>
+                <td>
+                  <span class="hentai">&#x1b08f;</span> (努)
+                  <span class="hentai">&#x1b090;</span> (奴)
+                  <span class="hentai">&#x1b091;</span> (怒)
+                </td>
+              </tr>
+              <tr>
+                <th>ね (袮=禰) ネ (袮=禰)</th>
+                <td>
+                  <span class="hentai">&#x1b092;</span> (年)
+                  <span class="hentai">&#x1b093;</span> (年)
+                  <span class="hentai">&#x1b094;</span> (年)
+                  <span class="hentai">&#x1b095;</span> (根)
+                  <span class="hentai">&#x1b096;</span> (熱)
+                  <span class="hentai">&#x1b097;</span> (袮禰)
+                  <span class="hentai">&#x1b098;</span> (子)
+                </td>
+              </tr>
+              <tr>
+                <th>の (乃) ノ (乃)</th>
+                <td>
+                  <span class="hentai">&#x1b099;</span> (乃)
+                  <span class="hentai">&#x1b09a;</span> (濃)
+                  <span class="hentai">&#x1b09b;</span> (能)
+                  <span class="hentai">&#x1b09c;</span> (能)
+                  <span class="hentai">&#x1b09d;</span> (農)
+                </td>
+              </tr>
+              <tr>
+                <th>は (波) ハ (八)</th>
+                <td>
+                  <span class="hentai">&#x1b09e;</span> (八)
+                  <span class="hentai">&#x1b09f;</span> (半)
+                  <span class="hentai">&#x1b0a0;</span> (婆)
+                  <span class="hentai">&#x1b0a1;</span> (波)
+                  <span class="hentai">&#x1b0a2;</span> (盤)
+                  <span class="hentai">&#x1b0a3;</span> (盤)
+                  <span class="hentai">&#x1b0a4;</span> (破)
+                  <span class="hentai">&#x1b0a5;</span> (者)
+                  <span class="hentai">&#x1b0a6;</span> (者)
+                  <span class="hentai">&#x1b0a7;</span> (葉)
+                  <span class="hentai">&#x1b0a8;</span> (頗)
+                </td>
+              </tr>
+              <tr>
+                <th>ひ (比) ヒ (比)</th>
+                <td>
+                  <span class="hentai">&#x1b0a9;</span> (悲)
+                  <span class="hentai">&#x1b0aa;</span> (日)
+                  <span class="hentai">&#x1b0ab;</span> (比)
+                  <span class="hentai">&#x1b0ac;</span> (避)
+                  <span class="hentai">&#x1b0ad;</span> (非)
+                  <span class="hentai">&#x1b0ae;</span> (飛)
+                  <span class="hentai">&#x1b0af;</span> (飛)
+                </td>
+              </tr>
+              <tr>
+                <th>ふ (不) フ (不)</th>
+                <td>
+                  <span class="hentai">&#x1b0b0;</span> (不)
+                  <span class="hentai">&#x1b0b1;</span> (婦)
+                  <span class="hentai">&#x1b0b2;</span> (布)
+                </td>
+              </tr>
+              <tr>
+                <th>へ (部) ヘ (部)</th>
+                <td>
+                  <span class="hentai">&#x1b0b3;</span> (倍)
+                  <span class="hentai">&#x1b0b4;</span> (弊)
+                  <span class="hentai">&#x1b0b5;</span> (弊)
+                  <span class="hentai">&#x1b0b6;</span> (遍)
+                  <span class="hentai">&#x1b0b7;</span> (邊)
+                  <span class="hentai">&#x1b0b8;</span> (邊边辺)
+                  <span class="hentai">&#x1b0b9;</span> (部)
+                </td>
+              </tr>
+              <tr>
+                <th>ほ (保) ホ (保)</th>
+                <td>
+                  <span class="hentai">&#x1b0ba;</span> (保)
+                  <span class="hentai">&#x1b0bb;</span> (保)
+                  <span class="hentai">&#x1b0bc;</span> (報报)
+                  <span class="hentai">&#x1b0bd;</span> (奉)
+                  <span class="hentai">&#x1b0be;</span> (寶)
+                  <span class="hentai">&#x1b0bf;</span> (本)
+                  <span class="hentai">&#x1b0c0;</span> (本)
+                  <span class="hentai">&#x1b0c1;</span> (豐豊)
+                </td>
+              </tr>
+              <tr>
+                <th>ま (末) マ (末)</th>
+                <td>
+                  <span class="hentai">&#x1b0c2;</span> (万)
+                  <span class="hentai">&#x1b0c3;</span> (末)
+                  <span class="hentai">&#x1b0c4;</span> (末)
+                  <span class="hentai">&#x1b0c5;</span> (滿满満)
+                  <span class="hentai">&#x1b0c6;</span> (滿)
+                  <span class="hentai">&#x1b0c7;</span> (萬)
+                  <span class="hentai">&#x1b0c8;</span> (麻)
+                  <span class="hentai">&#x1b0d6;</span> (馬马)
+                </td>
+              </tr>
+              <tr>
+                <th>み (美) ミ (三)</th>
+                <td>
+                  <span class="hentai">&#x1b0c9;</span> (三)
+                  <span class="hentai">&#x1b0ca;</span> (微)
+                  <span class="hentai">&#x1b0cb;</span> (美)
+                  <span class="hentai">&#x1b0cc;</span> (美)
+                  <span class="hentai">&#x1b0cd;</span> (美)
+                  <span class="hentai">&#x1b0ce;</span> (見见)
+                  <span class="hentai">&#x1b0cf;</span> (身)
+                </td>
+              </tr>
+              <tr>
+                <th>む (武) ム (牟)</th>
+                <td>
+                  <span class="hentai">&#x1b0d0;</span> (武)
+                  <span class="hentai">&#x1b0d1;</span> (無)
+                  <span class="hentai">&#x1b0d2;</span> (牟)
+                  <span class="hentai">&#x1b0d3;</span> (舞)
+                  <span class="hentai">&#x1b11d;</span> (无)
+                  <span class="hentai">&#x1b11e;</span> (无)
+                </td>
+              </tr>
+              <tr>
+                <th>め (女) メ (女)</th>
+                <td>
+                  <span class="hentai">&#x1b0d4;</span> (免)
+                  <span class="hentai">&#x1b0d5;</span> (面)
+                  <span class="hentai">&#x1b0d6;</span> (馬马)
+                </td>
+              </tr>
+              <tr>
+                <th>も (毛) モ (毛)</th>
+                <td>
+                  <span class="hentai">&#x1b0d7;</span> (母)
+                  <span class="hentai">&#x1b0d8;</span> (毛)
+                  <span class="hentai">&#x1b0d9;</span> (毛)
+                  <span class="hentai">&#x1b0da;</span> (毛)
+                  <span class="hentai">&#x1b0db;</span> (茂)
+                  <span class="hentai">&#x1b0dc;</span> (裳)
+                  <span class="hentai">&#x1b11d;</span> (无)
+                  <span class="hentai">&#x1b11e;</span> (无)
+                </td>
+              </tr>
+              <tr>
+                <th>や (也) ヤ (也)</th>
+                <td>
+                  <span class="hentai">&#x1b0dd;</span> (也)
+                  <span class="hentai">&#x1b0de;</span> (也)
+                  <span class="hentai">&#x1b0df;</span> (屋)
+                  <span class="hentai">&#x1b0e0;</span> (耶)
+                  <span class="hentai">&#x1b0e1;</span> (耶)
+                  <span class="hentai">&#x1b0e2;</span> (夜)
+                </td>
+              </tr>
+              <tr>
+                <th>ゆ (由) ユ (由? 弓?)</th>
+                <td>
+                  <span class="hentai">&#x1b0e3;</span> (游㳺)
+                  <span class="hentai">&#x1b0e4;</span> (由)
+                  <span class="hentai">&#x1b0e5;</span> (由)
+                  <span class="hentai">&#x1b0e6;</span> (遊逰)
+                </td>
+              </tr>
+              <tr>
+                <th>よ (与=與) ヨ (與)</th>
+                <td>
+                  <span class="hentai">&#x1b0e7;</span> (代)
+                  <span class="hentai">&#x1b0e8;</span> (余)
+                  <span class="hentai">&#x1b0e9;</span> (与與)
+                  <span class="hentai">&#x1b0ea;</span> (与)
+                  <span class="hentai">&#x1b0eb;</span> (与)
+                  <span class="hentai">&#x1b0ec;</span> (餘)
+                  <span class="hentai">&#x1b0e2;</span> (夜)
+                </td>
+              </tr>
+              <tr>
+                <th>ら (良) ラ (良)</th>
+                <td>
+                  <span class="hentai">&#x1b0ed;</span> (羅)
+                  <span class="hentai">&#x1b0ee;</span> (良)
+                  <span class="hentai">&#x1b0ef;</span> (良)
+                  <span class="hentai">&#x1b0f0;</span> (良)
+                  <span class="hentai">&#x1b07d;</span> (等)
+                </td>
+              </tr>
+              <tr>
+                <th>り (利) リ (利)</th>
+                <td>
+                  <span class="hentai">&#x1b0f1;</span> (利)
+                  <span class="hentai">&#x1b0f2;</span> (利)
+                  <span class="hentai">&#x1b0f3;</span> (李)
+                  <span class="hentai">&#x1b0f4;</span> (梨)
+                  <span class="hentai">&#x1b0f5;</span> (理)
+                  <span class="hentai">&#x1b0f6;</span> (里)
+                  <span class="hentai">&#x1b0f7;</span> (離)
+                </td>
+              </tr>
+              <tr>
+                <th>る (留) ル (流)</th>
+                <td>
+                  <span class="hentai">&#x1b0f8;</span> (流)
+                  <span class="hentai">&#x1b0f9;</span> (留)
+                  <span class="hentai">&#x1b0fa;</span> (留)
+                  <span class="hentai">&#x1b0fb;</span> (留)
+                  <span class="hentai">&#x1b0fc;</span> (累纍)
+                  <span class="hentai">&#x1b0fd;</span> (類)
+                </td>
+              </tr>
+              <tr>
+                <th>れ (礼=禮) レ (礼=禮)</th>
+                <td>
+                  <span class="hentai">&#x1b0fe;</span> (禮)
+                  <span class="hentai">&#x1b0ff;</span> (礼禮)
+                  <span class="hentai">&#x1b100;</span> (連连)
+                  <span class="hentai">&#x1b101;</span> (麗)
+                </td>
+              </tr>
+              <tr>
+                <th>ろ (呂) ロ (呂)</th>
+                <td>
+                  <span class="hentai">&#x1b102;</span> (呂)
+                  <span class="hentai">&#x1b103;</span> (呂)
+                  <span class="hentai">&#x1b104;</span> (婁娄)
+                  <span class="hentai">&#x1b105;</span> (樓楼)
+                  <span class="hentai">&#x1b106;</span> (路)
+                  <span class="hentai">&#x1b107;</span> (露)
+                </td>
+              </tr>
+              <tr>
+                <th>わ (和) ワ (???)</th>
+                <td>
+                  <span class="hentai">&#x1b108;</span> (倭)
+                  <span class="hentai">&#x1b109;</span> (和)
+                  <span class="hentai">&#x1b10a;</span> (和)
+                  <span class="hentai">&#x1b10b;</span> (王)
+                  <span class="hentai">&#x1b10c;</span> (王)
+                </td>
+              </tr>
+              <tr>
+                <th>ゐ (為=爲) ヰ (井)</th>
+                <td>
+                  <span class="hentai">&#x1b10d;</span> (井)
+                  <span class="hentai">&#x1b10e;</span> (井)
+                  <span class="hentai">&#x1b10f;</span> (居)
+                  <span class="hentai">&#x1b110;</span> (爲為)
+                  <span class="hentai">&#x1b111;</span> (遣)
+                </td>
+              </tr>
+              <tr>
+                <th>ゑ (恵=惠) ヱ (慧)</th>
+                <td>
+                  <span class="hentai">&#x1b112;</span> (惠)
+                  <span class="hentai">&#x1b113;</span> (衞衛)
+                  <span class="hentai">&#x1b114;</span> (衞)
+                  <span class="hentai">&#x1b115;</span> (衞)
+                </td>
+              </tr>
+              <tr>
+                <th>を (遠) ヲ (乎)</th>
+                <td>
+                  <span class="hentai">&#x1b116;</span> (乎)
+                  <span class="hentai">&#x1b117;</span> (乎)
+                  <span class="hentai">&#x1b118;</span> (尾)
+                  <span class="hentai">&#x1b119;</span> (緒)
+                  <span class="hentai">&#x1b11a;</span> (越)
+                  <span class="hentai">&#x1b11b;</span> (遠)
+                  <span class="hentai">&#x1b11c;</span> (遠)
+                  <span class="hentai">&#x1b005;</span> (惡)
+                </td>
+              </tr>
+              <tr>
+                <th>ん (无=無) ン (???)</th>
+                <td>
+                  <span class="hentai">&#x1b11d;</span> (无無)
+                  <span class="hentai">&#x1b11e;</span> (无)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <header>
+          <h2>たとへば</h2>
+        </header>
+        <div>
+          <p><img src="ashigirlss.png" width="25%" style="float:right; margin:0.5em;" />
+          さて 電視にて <ruby><rb>所謂</rb><rp>(</rp><rt>いはゆる</rt><rp>)</rp></ruby> 變體がなを 用ゐたる 時代劇 (といふか SF comedy) の scene 有り。
+          現代の女子高生が 戰國時代の うにょうにょしたる 字を 習ふ ところなり。</p>
+
+          <p>いざ 上の資料と 照し合せて 讀み解かむ。</p>
+          <p style="clear:both;"></p>
+
+        </div>
+
+        <div>
+          <img type="image/png" src="kokin.png" width="80%" /><br/>
+          <table width="100%">
+            <tbody>
+              <tr>
+                <td class="hentai" style="font-size:150%;">
+                  古今和歌集 卷 第一<br/>
+                  春 哥 上
+                </td>
+                <td>
+                  "哥" にも "歌" の意 有り。
+                </td>
+              </tr>
+              <tr>
+                <td class="hentai" style="font-size:150%;">
+                  年𛂜内𛂌 春𛂦き𛂌𛀳𛃲 ひとゝせ𛄚 こ𛁚とや...<br/>
+                  こと𛁅...
+                </td>
+                <td>
+                  としのうちに はるはきにけり ひととせを こそとや(いはむ)<br/>
+                  ことし(とやいはむ)
+                </td>
+              </tr>
+              <tr>
+                <td class="hentai" style="font-size:150%;">
+                  袖ひちて むす𛂪𛁅 水𛂜 こ𛃀れ...<br/>
+                  春立けふの 風...
+                </td>
+                <td>
+                  そでひちて むすびしみづの こぼれ(るを)<br/>
+                  はるたつけふの かぜ(やとくらむ)
+                </td>
+              </tr>
+              <tr>
+                <td class="hentai" style="font-size:150%;">
+                  春霞 𛁞てる𛃞いつこ 𛃎よ𛁅𛂜ゝ ...<br/>
+                  山𛂌 雪ハふ𛃶𛁪ゝ
+                </td>
+                <td>
+                  はるがすみ たてるやいづこ みよしのの (よしのの)<br/>
+                  やまに ゆきはふりつつ
+                </td>
+              </tr>
+              <tr>
+                <td class="hentai" style="font-size:150%;">
+                  雪𛂜うち𛂌 春𛂦き𛂌𛀳𛃲<br/>
+                  うく𛂪すの<br/>
+                  こ𛃀れる涙 今やとく<br/>
+                  𛃰む
+                </td>
+                <td>
+                  ゆきのうちに はるにきにけり<br/>
+                  うぐひすの<br/>
+                  こぼれるなみだ いまやとく<br/>
+                  らむ
+                </td>
+              </tr>
+              <tr>
+                <td class="hentai" style="font-size:150%;">
+                  梅𛀙𛀒𛂌<br/>
+                  きゐるうく𛂪す 春𛀚𛀳て 𛂁けと𛃚い𛃄𛁞<br/>
+                  雪ハふりつゝ
+                </td>
+                <td>
+                  うめかえに<br/>
+                  きゐるうぐひす はるかけて なけどもいまだ<br/>
+                  ゆきはふりつつ
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <header>
+          <h2>所感</h2>
+        </header>
+        <div>
+          <ul>
+            <li>上の 古今和歌集の 字は 解り難し。 我 例示を 誤りつ。</li>
+            <li>變體がなを codify するは 古典などの 界隈にては 好ましからめども
+            Unicode 10.0 に於る 實裝にては 數 足らじ。</li>
+            <li>變體がな ならず 既存の 漢字 CJK Unified Ideograph の 草書體の 異體字として codify すべしや。</li>
+            <li>されども さやうに 言ひだすに 現代の ひらがなも といふ 話に 陷る。</li>
+            <li>結局のところ あまり 有用とは 言へず。</li>
+          </ul>
+        </div>
+      </sction>
+
+    </article>
+
+    <footer>
+      <div style="text-align:center;">
+        <span class="copyleft">&copy;</span> all right reversed
+      </div>
+    </footer>
+
+  </body>
+</html>

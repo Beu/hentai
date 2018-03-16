@@ -1,0 +1,64 @@
+
+
+@font-face {
+    font-family: 'Hentai';
+    src:
+        /* url('hentai.tff') format('truetype'), */
+        /* url('hentai.otf') format('opentype'), */
+        url('hentai.woff') format('woff')
+        /* url('hentai.woff2') format('woff2') */
+        ;
+}
+
+.hentai {
+    font-family: 'Hentai';
+    font-size: 200%;
+}
+
+.copyleft {
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+.monospace {
+    font-family: monospace;
+}
+
+body {
+    padding: 1em;
+}
+
+h1 {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-left-style: solid;
+    border-left-width: 0.5em;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+}
+
+h2 {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-left-style: groove;
+    border-left-width: 0.5em;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+}
+
+div {
+    padding: 0.5em;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+section {
+    padding: 0.5em;
+}
+
+th {
+    padding: 0.5em;
+    background: #c0c0c0;
+}
